@@ -44,10 +44,16 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">头像</label>
                 <div class="col-xs-2 preview">
-                    {{if tc_avatar}}
+                    
+
+
+
+
+                {{if tc_avatar}}
                     <img src="{{tc_avatar}}">
                     {{else}}
-                    <img src="/public/images/default.png">
+                    <img src="/public/images/default.png">  
+                    <!-- 默认 -->
                     {{/if}}
                     <input type="file" id="upfile">
                     <div class="cover">
@@ -66,7 +72,7 @@
                 <div class="col-xs-3">
                     <label class="radio-inline">
                         <input name="tc_gender" value="0" type="radio" {{if tc_gender==0}}checked{{/if}}> 男
-                    </label>
+                     </label>
                     <label class="radio-inline">
                         <input name="tc_gender" value="1" type="radio" {{if tc_gender==1}}checked{{/if}}> 女
                     </label>
@@ -84,7 +90,7 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">籍贯</label>
                 <div class="col-xs-5" id="pcd ">
-                    <!-- 引入插件必须这里加p c  d -->
+                    <!-- 引入三级联动插件必须这里加p c  d -->
                     <select id="p" data-id='{{tc_province}}' name="tc_province" class="form-control input-sm">
                         <!-- data-id='{{tc_province}}'表示当前省的编号，插件要求 -->
                         <option value="">请选择省...</option>
@@ -119,7 +125,7 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">个人介绍</label>
                 <div class="col-xs-5 ckeditor">
-                    <textarea name="tc_introduce" rows="15" class="form-control input-sm">{{tc_introduce}}</textarea>
+                    <textarea id="editor" name="tc_introduce" rows="15" class="form-control input-sm">{{tc_introduce}}</textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -131,10 +137,10 @@
         </form>
 </script>
   <?php include('./views/common/script.html'); ?>
-<script type="text/javascript">
-     require(['settings']);
-</script>
 
+<script type="text/javascript">
+    require(['settings']);
+</script>
 
 </body>
 </html>

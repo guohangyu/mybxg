@@ -38,18 +38,21 @@
                 <input type="hidden" name="tc_id" value="{{tc_id}}"> 
                 <!-- 页面不显示，但是表单有，主要向后台提供数据用的 -->
                 {{/if}}
-                
+
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">姓名</label>
                     <div class="col-xs-4">
-                        <!-- form插件需要的class对应名字,所以
-data-required：定义了内容
+                        <!-- form表单提交插件需要的class对应名字,所以
+data-required：定义了内容必须填
 data-description='tcName：与js插件对应提示内容
 data-describedby='tcNameInfo'：定义提示的div
                          -->
                         <input data-required data-description='tcName' data-describedby='tcNameInfo' name="tc_name" value="{{tc_name}}" type="text" class="form-control input-sm" placeholder="讲师名称">
                     </div>
+
+                    <!-- 提示的div -->
                     <div class="col-xs-2" id="tcNameInfo"></div>
+
                 </div>
 
                 <!-- 如果存在，那就是编辑，不显示密码，编辑的时候 ，不显示密码，如果没有，将让它不显示-->
@@ -61,6 +64,11 @@ data-describedby='tcNameInfo'：定义提示的div
 
                          <!-- form插件需要的class对应名字,所以加clas名字必须跟js插件一一对应，跟上边讲师名称原理一样，
                         data-pattern='^\d{6}$'：必须填如6个数字
+                              form表单提交插件需要的class对应名字,所以
+data-required：定义了内容必须填
+data-description='tcPass：与js插件对应提示内容
+data-describedby='tcpassInfo'：定义提示的div
+                   
                          -->
                         <input data-required data-description='tcPass' data-describedby='tcPassInfo' data-pattern='^\d{6}$' name="tc_pass" type="password" class="form-control input-sm">
                     </div>
@@ -71,7 +79,7 @@ data-describedby='tcNameInfo'：定义提示的div
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">入职时间</label>
                     <div class="col-xs-4">
-                        <!-- data-provide='datepicker' :告诉是一个日历插件
+                        <!-- data-provide='datepicker' :告诉是一个日历插件提供者
                      data-date-language='zh-CN'  ：使用中文
                       data-date-format='yyyy-mm-dd' 格式使用，需要引入 datepicker和language2个js插件-->
                      <input data-required data-description='tcJoinDate' data-describedby='tcJoinDateInfo' data-provide='datepicker' data-date-language='zh-CN' data-date-format='yyyy-mm-dd' name="tc_join_date" value="{{tc_join_date}}" type="text" class="form-control input-sm">

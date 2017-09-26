@@ -43,7 +43,7 @@ function submitForm(url){
       valid : function(){   
         // valid有效的处理
         $(this).ajaxSubmit({
-          type : 'post',
+          type : 'post', 
           url : url,
           dataType : 'json',
           success : function(data){
@@ -54,7 +54,7 @@ function submitForm(url){
         });
       },
       description : {
-        // description验证
+        // description验证通过
 
 
         // 需要给html加入对应的class名字

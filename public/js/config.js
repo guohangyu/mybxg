@@ -39,7 +39,8 @@ require.config({
     login : '../js/login',    //登陆js
     teacherlist : '../js/teacher-list',   //老师js
     teacheradd : '../js/teacher-add',  //添加js
-    settings :'..js/settings',  //头像上传js
+    //头像上传js
+    settings:'..js/settings',
     index:'../js/index',   //index主页js
     courselist:'../js/course-add'  //course的js
   },
@@ -59,6 +60,8 @@ require.config({
       deps : ['jquery']
     },
 
+
+//图片上传的jquery插件
      uploadify : {
       deps : ['jquery']
     },
